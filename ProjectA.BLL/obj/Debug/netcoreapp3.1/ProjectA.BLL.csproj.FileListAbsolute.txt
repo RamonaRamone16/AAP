@@ -1,0 +1,15 @@
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.BLL.deps.json
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.BLL.dll
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.BLL.pdb
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.DAL.dll
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.Models.dll
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.DAL.pdb
+C:\Repositories\ProjectA\ProjectA.BLL\bin\Debug\netcoreapp3.1\ProjectA.Models.pdb
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.csproj.AssemblyReference.cache
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.AssemblyInfoInputs.cache
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.AssemblyInfo.cs
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.csproj.CoreCompileInputs.cache
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.csproj.CopyComplete
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.dll
+C:\Repositories\ProjectA\ProjectA.BLL\obj\Debug\netcoreapp3.1\ProjectA.BLL.pdb

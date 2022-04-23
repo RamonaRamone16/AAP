@@ -1,0 +1,15 @@
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.DAL.deps.json
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.DAL.runtimeconfig.json
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.DAL.runtimeconfig.dev.json
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.DAL.dll
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.DAL.pdb
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.Models.dll
+C:\Repositories\ProjectA\ProjectA.DAL\bin\Debug\netcoreapp3.1\ProjectA.Models.pdb
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.csproj.AssemblyReference.cache
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.AssemblyInfoInputs.cache
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.AssemblyInfo.cs
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.csproj.CoreCompileInputs.cache
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.dll
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.pdb
+C:\Repositories\ProjectA\ProjectA.DAL\obj\Debug\netcoreapp3.1\ProjectA.DAL.genruntimeconfig.cache
