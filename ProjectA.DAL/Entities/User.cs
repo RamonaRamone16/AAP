@@ -10,5 +10,7 @@ namespace ProjectA.DAL.Entities
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override string Id { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }

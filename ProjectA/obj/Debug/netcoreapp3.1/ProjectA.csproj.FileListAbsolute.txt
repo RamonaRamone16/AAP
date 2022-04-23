@@ -104,3 +104,16 @@ C:\Repositories\ProjectA\ProjectA\bin\Debug\netcoreapp3.1\ProjectA.Models.pdb
 C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\ProjectA.Views.pdb
 C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\ProjectA.csproj.CopyComplete
 C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\ProjectA.genruntimeconfig.cache
+C:\Repositories\ProjectA\ProjectA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Repositories\ProjectA\ProjectA\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Repositories\ProjectA\ProjectA\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Repositories\ProjectA\ProjectA\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\ChangePassword.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\EditRole.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\EditUser.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\EditUsersInRole.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\ListRoles.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\ListUsers.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\ManageUserRoles.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\Register.cshtml.g.cs

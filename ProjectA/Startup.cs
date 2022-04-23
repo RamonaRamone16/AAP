@@ -9,8 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjectA.BLL.AutoMapper;
+using ProjectA.BLL.Services;
 using ProjectA.DAL;
 using ProjectA.DAL.Entities;
+using ProjectA.DAL.Seeds;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +46,9 @@ namespace ProjectA
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDBContext>();
 
+            services.AddScoped<AccountService>();
+            services.AddScoped<SelectListService>();
+
             services.AddAutoMapper(typeof(MappingConfiguration));
 
             services.AddControllersWithViews();
@@ -51,7 +56,8 @@ namespace ProjectA
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+            UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -79,6 +85,9 @@ namespace ProjectA
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            ApplicationDbInitializer.SeedRoles(roleManager).ConfigureAwait(false).GetAwaiter().GetResult();
+            ApplicationDbInitializer.SeedUsers(userManager).ConfigureAwait(false).GetAwaiter().GetResult();
         }
     }
 }
