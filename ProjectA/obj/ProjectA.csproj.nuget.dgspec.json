@@ -268,6 +268,9 @@
             "projectReferences": {
               "C:\\Repositories\\ProjectA\\ProjectA.BLL\\ProjectA.BLL.csproj": {
                 "projectPath": "C:\\Repositories\\ProjectA\\ProjectA.BLL\\ProjectA.BLL.csproj"
+              },
+              "C:\\Repositories\\ProjectA\\ProjectA.DAL\\ProjectA.DAL.csproj": {
+                "projectPath": "C:\\Repositories\\ProjectA\\ProjectA.DAL\\ProjectA.DAL.csproj"
               }
             }
           }

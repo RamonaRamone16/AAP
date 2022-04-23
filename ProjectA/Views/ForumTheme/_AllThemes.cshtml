@@ -1,0 +1,30 @@
+﻿@using ProjectA.Models.Models.Theme 
+@model List<ThemeModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Темы</h2>
+
+<hr />
+
+@foreach (ThemeModel theme in Model)
+{
+    <div class="text-center mt-3 mb-3">
+        <div class="d-flex justify-content-between">
+            <p style="font-size: 15px" class="d-inline">@theme.UserName</p>
+        </div>
+        <h4>
+            <a asp-action="Index" asp-controller="ForumComment" asp-route-id="@theme.Id">
+                @theme.Title
+            </a>
+        </h4>
+        <p> @theme.Content</p>
+        <p class="text-right" style="font-size: 16px">
+            <img src="https://img.icons8.com/ultraviolet/40/000000/faq.png" style="height: 18px" />
+            @theme.CommentsCount
+        </p>
+    </div>
+    <hr />
+}

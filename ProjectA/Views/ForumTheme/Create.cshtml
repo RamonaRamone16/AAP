@@ -1,0 +1,67 @@
+﻿@using ProjectA.DAL.Entities
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div id="allThemes"></div>
+
+<hr />
+@if (SignInManager.IsSignedIn(User))
+{
+    <div><input type="button" id="createTheme" class="btn-primary" value="Создать тему" /></div>
+    <div id="themeForm" style="display: none">
+        <p style="font-size: 25px; font-weight: 700">Название темы</p>
+        <input type="text" id="themeTitle" class="d-block" style="margin-top: 50px" />
+        <p style="font-size: 25px; font-weight: 700">Содержание</p>
+        <textarea id="themeContent" class="form-control"></textarea>
+        <button onclick="createNewTheme(getAllThemes)" type="submit" class="btn btn-info" style="margin-top: 50px">Создать</button>
+    </div>
+}
+
+
+@section Scripts {
+    <script>
+        const getAllThemes = () => {
+            $('#allThemes').load('@Url.Action("GetAllThemes", "ForumTheme")');
+        };
+
+        const createNewTheme = (callback) => {
+            console.log("createNewTheme method")
+            const title = $('#themeTitle').val();
+            const content = $('#themeContent').val();
+
+            $.ajax({
+                url: '@Url.Action("CreateTheme", "ForumTheme")',
+                type: "POST",
+                data: {
+                    title,
+                    content
+                },
+                success: function (data) {
+                    $('#themeForm').hide();
+                    $('#createTheme').show();
+                    console.log(data);
+                    callback();
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        $('#createTheme').click(function () {
+            $('#themeForm').val('');
+            $('#themeForm').show();
+            $('#createTheme').hide();
+        });
+
+        $(function() {
+            getAllThemes();
+        });
+
+    </script>
+}

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using ProjectA.BLL.AutoMapper.Mappings.Comment;
+using ProjectA.BLL.AutoMapper.Mappings.Role;
+using ProjectA.BLL.AutoMapper.Mappings.Theme;
 using ProjectA.BLL.AutoMapper.Mappings.User;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProjectA.BLL.AutoMapper
 {
@@ -17,6 +17,12 @@ namespace ProjectA.BLL.AutoMapper
                 cfg.AddProfile(new DomainToRoleForUserModelProfile());
                 cfg.AddProfile(new EditUserModelToDomainProfile());
                 cfg.AddProfile(new RoleForUserModelToDomainProfile());
+                cfg.AddProfile(new UserForRoleModelToDomainProfile());
+                cfg.AddProfile(new DomainProfileToThemeModel());
+                cfg.AddProfile(new ThemeModelToDomainProfile());
+                cfg.AddProfile(new ThemeCreateModelToDomainProfile());
+                cfg.AddProfile(new CommentModelToDomainProfile());
+                cfg.AddProfile(new DomainProfileToCommentModel());
             });
         }
     }

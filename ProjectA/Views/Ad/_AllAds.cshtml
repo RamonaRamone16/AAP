@@ -1,0 +1,25 @@
+﻿@using ProjectA.DAL.Entities
+@model List<Ad>
+
+@{
+    ViewData["Title"] = "_AllRecords";
+}
+
+
+<h5>Объявления</h5>
+
+<hr />
+@foreach (var item in Model)
+{
+    <div class="text-center mt-3 mb-3">
+        <div class="d-flex justify-content-between">
+            <p style="font-size: 15px" class="d-inline">@item.User.Name @item.User.Surname</p>
+        </div>
+        <h4>
+                @item.Title
+        </h4>
+        <p> @item.Content</p>
+    </div>
+    <hr />
+}
+

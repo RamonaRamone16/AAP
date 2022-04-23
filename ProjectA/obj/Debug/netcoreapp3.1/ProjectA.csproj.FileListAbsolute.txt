@@ -117,3 +117,11 @@ C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManage
 C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\ListUsers.cshtml.g.cs
 C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\ManageUserRoles.cshtml.g.cs
 C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\UserManagement\Register.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\ForumComment\Index.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\ForumComment\_AllRecords.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\ForumTheme\Create.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\ForumTheme\_AllThemes.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\Ad\Create.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\Ad\_AllAds.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\Vacancy\Create.cshtml.g.cs
+C:\Repositories\ProjectA\ProjectA\obj\Debug\netcoreapp3.1\Razor\Views\Vacancy\_AllVacancies.cshtml.g.cs

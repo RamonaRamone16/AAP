@@ -48,6 +48,10 @@ namespace ProjectA
 
             services.AddScoped<AccountService>();
             services.AddScoped<SelectListService>();
+            services.AddScoped<ThemeService>();
+            services.AddScoped<CommentService>();
+            services.AddScoped<VacancyService>();
+            services.AddScoped<AdService>();
 
             services.AddAutoMapper(typeof(MappingConfiguration));
 

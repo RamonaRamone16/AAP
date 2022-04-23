@@ -9053,7 +9053,8 @@
       "Microsoft.AspNetCore.Identity.UI >= 3.1.19",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.19",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.19",
-      "ProjectA.BLL >= 1.0.0"
+      "ProjectA.BLL >= 1.0.0",
+      "ProjectA.DAL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9092,6 +9093,9 @@
           "projectReferences": {
             "C:\\Repositories\\ProjectA\\ProjectA.BLL\\ProjectA.BLL.csproj": {
               "projectPath": "C:\\Repositories\\ProjectA\\ProjectA.BLL\\ProjectA.BLL.csproj"
+            },
+            "C:\\Repositories\\ProjectA\\ProjectA.DAL\\ProjectA.DAL.csproj": {
+              "projectPath": "C:\\Repositories\\ProjectA\\ProjectA.DAL\\ProjectA.DAL.csproj"
             }
           }
         }

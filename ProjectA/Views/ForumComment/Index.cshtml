@@ -1,0 +1,75 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ProjectA.DAL.Entities
+@using ProjectA.Models.Models.Theme
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+@model ThemeModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center mt-3 mb-3">
+    <div class="d-flex justify-content-between">
+        <p style="font-size: 15px" class="d-inline">@Model.UserName</p>
+        <p style="font-size: 15px" class="d-inline">@Model.CreatedUtc</p>
+    </div>
+    <h2>@Model.Title</h2>
+    <p> @Model.Content</p>
+</div>
+<hr />
+
+
+<div id="allRecords"></div>
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div>
+        <p style="font-size: 25px; font-weight: 700">Добавить ответ</p>
+        <textarea id="newRecord" class="form-control"></textarea>
+        <button onclick="createNewRecord(getAllRecords)" type="submit" class="btn btn-info" style="margin-top: 50px">Ответить</button>
+    </div>
+}
+
+
+
+@section Scripts{
+    <script>
+        const getAllRecords = () => {
+            $('#allRecords').load('@Url.Action("GetAllComments", "ForumComment")?themeId=' + @Model.Id);
+        };
+
+        const createNewRecord = (callback) => {
+            console.log("addNewRequest method")
+            const content = $('#newRecord').val();
+            const themeId = @Model.Id;
+
+            $.ajax({
+                url: '@Url.Action("CreateNewComment", "ForumComment")',
+                type: "POST",
+                data: {
+                    content,
+                    themeId
+                },
+                success: function(data) {
+                    console.log(data);
+                    callback();
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        $(function() {
+            getAllRecords();
+        });
+
+    </script>
+}
+
+
+
+
+

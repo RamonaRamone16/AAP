@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EntitiesConfiguration\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ProjectA.Models\ProjectA.Models.csproj" />
   </ItemGroup>
 

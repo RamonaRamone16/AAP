@@ -13,6 +13,11 @@ namespace ProjectA.DAL
 {
     public class ApplicationDBContext : IdentityDbContext<User>
     {
+        public DbSet<Theme> Themes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Ad> Ads { get; set; }
+        public DbSet<Vacancy> Vacancies { get; set; }
+
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
         }

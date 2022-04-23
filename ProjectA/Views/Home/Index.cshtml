@@ -1,8 +1,379 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using ProjectA.DAL.Entities;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Medilab Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Medilab - v4.7.1
+    * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-lg-start">
+
+            <h1 class="logo me-auto mr-0"><a href="index.html">КГУСТА</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            @*            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    @if (SignInManager.IsSignedIn(User) && (User.IsInRole("Admin")))
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Admin" asp-action="Index">Админ панель</a>
+                            </li>
+                        </ul>
+                    }
+                    else if (SignInManager.IsSignedIn(User))
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                        </ul>
+                    }
+                </div>*@
+            <nav id="navbar" class="navbar order-last order-lg-0 mr-3">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Главная</a></li>
+                    <li><a class="nav-link scrollto" href="#about">О нас</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Контакты</a></li>
+                    @if (SignInManager.IsSignedIn(User) && (User.IsInRole("Admin")))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Admin" asp-action="Index">Админ панель</a>
+                        </li>
+                    }
+                    else if (SignInManager.IsSignedIn(User))
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                        </ul>
+                    }
+                    <partial name="_LoginPartial" />
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us justify-content-center">
+            <div class="container ">
+
+                <div class="row">
+
+                    <div class="col-lg-8 d-flex align-items-stretch">
+                        <div class="icon-boxes d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-receipt"></i>
+                                        <h4><a class="nav-link text-dark" asp-area="" asp-controller="ForumTheme" asp-action="Create">Форум консультаций</a></h4>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-receipt"></i>
+                                        <h4> <a class="nav-link text-dark" asp-area="" asp-controller="Ad" asp-action="Create">Объявления</a></h4>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-cube-alt"></i>
+                                        <h4><a class="nav-link text-dark" asp-area="" asp-controller="Vacancy" asp-action="Create">Вакансии и Стажировки</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .content-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Why Us Section -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+                    </div>
+
+                    <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                        <h3>Об Университете</h3>
+                        <p> Кыргызский государственный университет строительства, транспорта и архитектуры имени Н. Исанова (Кыргызский архитектурно - строительный институт - КАСИ 1992-1998 г.г.) создан 4 мая 1992 г. на базе Фрунзенского политехнического института (ФПИ), организованного 1 октября 1954 г. для подготовки национальных кадров по строительству, транспорту и архитектуре. В целях дальнейшего углубления реформы системы образования, адаптации к новым экономическим условиям, повышения качества подготовки специалистов КАСИв 1998г. преобразован в Кыргызский государственный университет строительства, транспорта и архитектуры (КГУСТА).  В 2008 г. присвоено университету имя Исанова Насирдина Исановича, Первого Премьер-министра суверенного Кыргызстана. </p>
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                            <h4 class="title" @*style="margin-top:20px"*@><a href="https://ksucta.kg/ru/%D0%BC%D0%B8%D1%81%D1%81%D0%B8%D1%8F.html">Миссия</a></h4>
+                            <p class="description">Удовлетворение потребностей личности, общества и государства в образовательных услугах, научных исследованиях и инновациях в области архитектуры, строительства, транспорта, экологи и IT- технологии путем подготовки компетентных кадров, конкурентоспособных на рынке труда.</p>
+                        </div>
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-gift"></i></div>
+                            <h4 class="title"><a href="">Введение</a></h4>
+                            <p class="description">КГУСТА им. Н.Исанова - университет инновационного типа, признанный на Международном научно - образовательном пространстве, реализующий высокое качество высшего профессионального образования и научно - исследовательских работ.</p>
+                        </div>
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-atom"></i></div>
+                            <h4 class="title"><a href="">Цели</a></h4>
+                            <p class="description">Сохранение и развитие лучших традиций классического архитектурного, инновационного и инженерного образования при любых организационных преобразованиях высшей школы</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="600" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Учителя</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                        <div class="count-box">
+                            <i class="fa-studiovinari"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Учащиеся</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="far fa-hospital"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Филиалы</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="fas fa-award"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Профессии</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Counts Section -->
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Связаться с нами</h2>
+                </div>
+            </div>
+
+            <div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+            <div class="container">
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Адрес:</h4>
+                                <p>г. Бишкек, ул. Малдыбаева, 34 б</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Напишите нам</h4>
+                                <p>ksucta_web@mail.ru</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Телефон для справок:</h4>
+                                <p>+(996 312) 54-35-61</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+        <footer id="footer">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>  Университет </h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Ректорат</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Структура университета</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Международное сотрудничество</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Культура, искусство, творчество</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Направления деятельности</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Общественные организации</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Спорт и здоровье</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Социальная поддержка</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Программа устойчивого развития</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Символика</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Успехи, достижения, рейтинги</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Экскурсионно-музейный комплекс</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Образование</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Институты</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Университетский колледж</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Управление образовательных программ</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Образование за рубежом</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Образовательные стандарты</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Сведения об образовательной организации</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Основные сведенья</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Структура и органы управления образовательной организацией</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Документы</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Образовательные стандарты</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Платные образовательные услуги</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Финансово-хозяйственная деятельность</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Вакантные места для приема (перевода)</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Социум</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Управление молодежной политики и воспитательной деятельности</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Волонтерство</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Этический кодекс</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Образовательные стандарты</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Здоровье и спорт</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Студенческое самоуправлениеь</a></li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </footer><!-- End Footer -->
+    </main><!-- End #main -->
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
